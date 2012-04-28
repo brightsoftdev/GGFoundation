@@ -14,6 +14,7 @@
 #import "GGPath.h"
 #import "FontLabel.h"
 #import "FontManager.h"
+#import "JSON.h"
 
 // free functions
 NSString * ggFoundationVersion(void);

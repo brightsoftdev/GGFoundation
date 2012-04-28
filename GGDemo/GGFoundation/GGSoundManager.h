@@ -14,7 +14,7 @@
     float _backgroundMusicVolume;
     float _effectVolume;
     
-    NSArray *_effects;
+    NSMutableArray *_effects;
     NSString *_backgroundMusics;
     
     SimpleAudioEngine *_simpleAudioEngine;
@@ -22,7 +22,7 @@
 
 @property (nonatomic, assign) float backgroundMusicVolume;
 @property (nonatomic, assign) float effectVolume;
-@property (nonatomic, retain) NSArray *effects;
+@property (nonatomic, retain) NSMutableArray *effects;
 @property (nonatomic, retain) NSString *backgroundMusics;
 
 DECLARE_SINGLETON(GGSoundManager);
@@ -41,6 +41,8 @@ DECLARE_SINGLETON(GGSoundManager);
 
 - (void) playEffect:(NSString *)pathFile;
 
-- (void) unloadEffects;
+- (void) unloadAllEffect;
+
+- (void) unloadEffectsWith:(NSArray *)effects;
 
 @end

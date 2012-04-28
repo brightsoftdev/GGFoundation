@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EBA01B2C15494FFD00ECD185 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA01B2315494FFD00ECD185 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EBA01B2D15494FFD00ECD185 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA01B2515494FFD00ECD185 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EBA01B2E15494FFD00ECD185 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA01B2715494FFD00ECD185 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EBA01B2F15494FFD00ECD185 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA01B2915494FFD00ECD185 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EBA01B3015494FFD00ECD185 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA01B2B15494FFD00ECD185 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EBD6632215464C46009C94F6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD6632115464C46009C94F6 /* Security.framework */; };
 		EBD6632515464C50009C94F6 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD6632415464C50009C94F6 /* CoreFoundation.framework */; };
-		EBD6639815466098009C94F6 /* GGFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD6639615466098009C94F6 /* GGFontViewController.m */; };
+		EBD6639815466098009C94F6 /* GGFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD6639615466098009C94F6 /* GGFontViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EBD663E01546AC3E009C94F6 /* POP字体mix-w5.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EBD663DB1546AC3E009C94F6 /* POP字体mix-w5.TTF */; };
 		EBD663E11546AC3F009C94F6 /* 全新硬笔隶书简.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBD663DC1546AC3E009C94F6 /* 全新硬笔隶书简.ttf */; };
 		EBD663E21546AC3F009C94F6 /* 方正卡通简体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBD663DD1546AC3E009C94F6 /* 方正卡通简体.ttf */; };
@@ -69,6 +74,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EBA01B2115494FFD00ECD185 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		EBA01B2215494FFD00ECD185 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		EBA01B2315494FFD00ECD185 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		EBA01B2415494FFD00ECD185 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		EBA01B2515494FFD00ECD185 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		EBA01B2615494FFD00ECD185 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		EBA01B2715494FFD00ECD185 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		EBA01B2815494FFD00ECD185 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		EBA01B2915494FFD00ECD185 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		EBA01B2A15494FFD00ECD185 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		EBA01B2B15494FFD00ECD185 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		EBD6632115464C46009C94F6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EBD6632415464C50009C94F6 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		EBD6639515466097009C94F6 /* GGFontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGFontViewController.h; sourceTree = "<group>"; };
@@ -180,6 +196,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EBA01B2015494FFD00ECD185 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				EBA01B2115494FFD00ECD185 /* JSON.h */,
+				EBA01B2215494FFD00ECD185 /* NSObject+SBJSON.h */,
+				EBA01B2315494FFD00ECD185 /* NSObject+SBJSON.m */,
+				EBA01B2415494FFD00ECD185 /* NSString+SBJSON.h */,
+				EBA01B2515494FFD00ECD185 /* NSString+SBJSON.m */,
+				EBA01B2615494FFD00ECD185 /* SBJsonBase.h */,
+				EBA01B2715494FFD00ECD185 /* SBJsonBase.m */,
+				EBA01B2815494FFD00ECD185 /* SBJsonParser.h */,
+				EBA01B2915494FFD00ECD185 /* SBJsonParser.m */,
+				EBA01B2A15494FFD00ECD185 /* SBJsonWriter.h */,
+				EBA01B2B15494FFD00ECD185 /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		EBD663DA1546AC3E009C94F6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +309,7 @@
 		EBF71C2E154646310049A45C /* GGFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				EBA01B2015494FFD00ECD185 /* JSON */,
 				EBD663DA1546AC3E009C94F6 /* Resources */,
 				EBF71C4E154646310049A45C /* TouchJSON */,
 				EBF71C2F154646310049A45C /* CocosDenshion */,
@@ -567,6 +602,11 @@
 				EBF71C70154646310049A45C /* CJSONSerializer.m in Sources */,
 				EBF71C82154647ED0049A45C /* GGSoundViewController.m in Sources */,
 				EBD6639815466098009C94F6 /* GGFontViewController.m in Sources */,
+				EBA01B2C15494FFD00ECD185 /* NSObject+SBJSON.m in Sources */,
+				EBA01B2D15494FFD00ECD185 /* NSString+SBJSON.m in Sources */,
+				EBA01B2E15494FFD00ECD185 /* SBJsonBase.m in Sources */,
+				EBA01B2F15494FFD00ECD185 /* SBJsonParser.m in Sources */,
+				EBA01B3015494FFD00ECD185 /* SBJsonWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,11 +703,18 @@
 		EBF71C25154645470049A45C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: FU HENG (U97845K7LR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGDemo/GGDemo-Prefix.pch";
 				INFOPLIST_FILE = "GGDemo/GGDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "904A4063-D29C-4264-9E7F-6CD8918221BD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -675,11 +722,18 @@
 		EBF71C26154645470049A45C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: FU HENG (U97845K7LR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGDemo/GGDemo-Prefix.pch";
 				INFOPLIST_FILE = "GGDemo/GGDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "904A4063-D29C-4264-9E7F-6CD8918221BD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

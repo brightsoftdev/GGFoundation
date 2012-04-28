@@ -15,6 +15,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+         NSLog(@"%@: %@", NSStringFromSelector(_cmd), self);
         // Custom initialization
         self.title = @"Sound Test";
     }
@@ -74,14 +75,20 @@
     [super viewDidLoad];
     
     [[GGSoundManager sharedGGSoundManager] loadBackgroundMusic:@"backMusic.mp3"];
+    //NSArray *effects = [NSArray arrayWithObjects:@"crow.mp3", nil];
     NSArray *effects = [NSArray arrayWithObjects:@"crow.mp3", nil];
     [[GGSoundManager sharedGGSoundManager] loadEffect:effects];
+   // NSSet *effect1s = [NSSet setWithObjects:@"crow.mp3", @"backMusic.mp3", nil];
+ //   [[GGSoundManager sharedGGSoundManager] loadEffect:effect1s andTarget:self];
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidUnload
 {
-    [[GGSoundManager sharedGGSoundManager] unloadEffects];
+    [[GGSoundManager sharedGGSoundManager] stopBackgroundMusic];
+    
+    [[GGSoundManager sharedGGSoundManager] unloadEffectsWith:[NSArray arrayWithObjects:@"crow.mp3", nil]];
+    NSLog(@"%@: %@", NSStringFromSelector(_cmd), self);
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -91,6 +98,13 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+- (void) dealloc
+{
+    [[GGSoundManager sharedGGSoundManager] stopBackgroundMusic];
+     [[GGSoundManager sharedGGSoundManager] unloadEffectsWith:[NSArray arrayWithObjects:@"crow.mp3", nil]];
+     NSLog(@"%@: %@", NSStringFromSelector(_cmd), self);
+    [super dealloc];
 }
 
 @end

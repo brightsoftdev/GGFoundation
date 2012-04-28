@@ -22,6 +22,7 @@ SYNTHESIZE_SINGLETON(GGSoundManager);
         _simpleAudioEngine = [SimpleAudioEngine sharedEngine];
         _backgroundMusicVolume = 1.0;
         _effectVolume = 1.0;
+        self.effects = [NSMutableArray array];
     }
     return self;
 }
@@ -52,10 +53,10 @@ SYNTHESIZE_SINGLETON(GGSoundManager);
 
 - (void) loadEffect:(NSArray *)effects
 {
-    self.effects = effects;
     for (NSString *name in effects) {
         [_simpleAudioEngine preloadEffect:name];
     }
+    [self.effects addObjectsFromArray:effects];
 }
 
 - (void) loadBackgroundMusic:(NSString *)musicName
@@ -93,11 +94,17 @@ SYNTHESIZE_SINGLETON(GGSoundManager);
     [_simpleAudioEngine playEffect:pathFile];
 }
 
-- (void) unloadEffects
+- (void) unloadAllEffect
 {
-    for (NSString *filePath in _effects) {
+    [self unloadEffectsWith:self.effects];
+}
+
+- (void) unloadEffectsWith:(NSArray *)effects
+{
+    for (NSString *filePath in effects) {
         [_simpleAudioEngine unloadEffect:filePath];
     }
+    [self.effects removeObjectsInArray:effects];
 }
 
 

@@ -20,14 +20,15 @@
 
 - (IBAction)sound:(id)sender
 {
-    GGSoundViewController *soundController = [[GGSoundViewController alloc] initWithNibName:@"GGSoundViewController" bundle:nil];
+    GGSoundViewController *soundController = [[[GGSoundViewController alloc] initWithNibName:@"GGSoundViewController" bundle:nil] autorelease];
     [self.navigationController pushViewController:soundController animated:YES];
 }
 
 - (IBAction)font:(id)sender
 {
-    GGFontViewController *soundController = [[GGFontViewController alloc] init];
-    [self.navigationController pushViewController:soundController animated:YES];
+    GGFontViewController *fontController = [[GGFontViewController alloc] init];
+    [self.navigationController pushViewController:fontController animated:YES];
+    [fontController release];
 }
 
 #pragma mark - View lifecycle
