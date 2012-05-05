@@ -27,22 +27,22 @@
 
 DECLARE_SINGLETON(GGSoundManager);
 
-- (void) loadEffect:(NSArray *)effects;
+- (void)loadEffect:(NSArray *)effects;
 
-- (void) loadBackgroundMusic:(NSString *)musicName;
+- (void)loadBackgroundMusic:(NSString *)musicName;
 
-- (void) playBackgroundMusic:(NSString *)pathFile loop:(BOOL)isLoop;
+- (void)playBackgroundMusic:(NSString *)pathFile loop:(BOOL)isLoop;
 
-- (void) stopBackgroundMusic;
+- (void)stopBackgroundMusic;
 
-- (void) pauseBackgroundMusic;
+- (void)pauseBackgroundMusic;
 
-- (void) resumeBackgroundMusic;
+- (void)resumeBackgroundMusic;
 
-- (void) playEffect:(NSString *)pathFile;
+- (void)playEffect:(NSString *)pathFile;
 
-- (void) unloadAllEffect;
+- (void)unloadAllEffect;
 
-- (void) unloadEffectsWith:(NSArray *)effects;
+- (void)unloadEffectsWith:(NSArray *)effects;
 
 @end

@@ -10,8 +10,11 @@
 
 @interface GGUtil : NSObject
 
-+ (CGRect) screenFrame;
++ (CGRect)screenFrame;
 
-+ (CGSize) screenSize;
++ (CGSize)screenSize;
+
+// 为了开发时查看系统的字体，一定要时真机字体
++ (void)displaySystemFamilyFont;
 
 @end

@@ -17,4 +17,4 @@
 #import "JSON.h"
 
 // free functions
-NSString * ggFoundationVersion(void);
+NSString *ggFoundationVersion(void);

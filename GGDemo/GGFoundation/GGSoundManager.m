@@ -51,7 +51,7 @@ SYNTHESIZE_SINGLETON(GGSoundManager);
     _simpleAudioEngine.effectsVolume = _effectVolume;
 }
 
-- (void) loadEffect:(NSArray *)effects
+- (void)loadEffect:(NSArray *)effects
 {
     for (NSString *name in effects) {
         [_simpleAudioEngine preloadEffect:name];
@@ -59,13 +59,13 @@ SYNTHESIZE_SINGLETON(GGSoundManager);
     [self.effects addObjectsFromArray:effects];
 }
 
-- (void) loadBackgroundMusic:(NSString *)musicName
+- (void)loadBackgroundMusic:(NSString *)musicName
 {
     self.backgroundMusics = musicName;
     [_simpleAudioEngine preloadBackgroundMusic:musicName];
 }
 
-- (void) playBackgroundMusic:(NSString *)pathFile loop:(BOOL)isLoop
+- (void)playBackgroundMusic:(NSString *)pathFile loop:(BOOL)isLoop
 {
     if (isLoop) {
         [_simpleAudioEngine playBackgroundMusic:pathFile];
@@ -74,32 +74,32 @@ SYNTHESIZE_SINGLETON(GGSoundManager);
     [_simpleAudioEngine playBackgroundMusic:pathFile loop:isLoop];
 }
 
-- (void) stopBackgroundMusic
+- (void)stopBackgroundMusic
 {
     [_simpleAudioEngine stopBackgroundMusic];
 }
 
-- (void) pauseBackgroundMusic
+- (void)pauseBackgroundMusic
 {
     [_simpleAudioEngine pauseBackgroundMusic];
 }
 
-- (void) resumeBackgroundMusic
+- (void)resumeBackgroundMusic
 {
     [_simpleAudioEngine resumeBackgroundMusic];
 }
 
-- (void) playEffect:(NSString *)pathFile
+- (void)playEffect:(NSString *)pathFile
 {    
     [_simpleAudioEngine playEffect:pathFile];
 }
 
-- (void) unloadAllEffect
+- (void)unloadAllEffect
 {
     [self unloadEffectsWith:self.effects];
 }
 
-- (void) unloadEffectsWith:(NSArray *)effects
+- (void)unloadEffectsWith:(NSArray *)effects
 {
     for (NSString *filePath in effects) {
         [_simpleAudioEngine unloadEffect:filePath];
