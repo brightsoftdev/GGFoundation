@@ -14,4 +14,6 @@
 
 - (IBAction)font:(id)sender;
 
+- (IBAction)webView:(id)sender;
+
 @end

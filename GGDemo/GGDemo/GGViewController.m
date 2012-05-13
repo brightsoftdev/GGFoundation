@@ -9,6 +9,7 @@
 #import "GGViewController.h"
 #import "GGSoundViewController.h"
 #import "GGFontViewController.h"
+#import "GGWebViewController.h"
 
 @implementation GGViewController
 
@@ -30,6 +31,13 @@
     [self.navigationController pushViewController:fontController animated:YES];
     [fontController release];
 }
+
+- (IBAction)webView:(id)sender
+{
+    GGWebViewController *webViewController = [[GGWebViewController alloc] init];
+    [self.navigationController pushViewController:webViewController animated:YES];
+    [webViewController release];
+} 
 
 #pragma mark - View lifecycle
 

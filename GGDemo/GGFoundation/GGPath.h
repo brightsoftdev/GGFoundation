@@ -12,6 +12,7 @@
 
 + (NSString *)documentPath;
 + (NSString *)documentPathWithFileName:(NSString *)fileName;
++ (NSData *)documentPathWith:(NSString *)fileName;
 
 + (NSString *)bundleFile:(NSString *)fileName;
 + (NSString *)bundleFile:(NSString *)fileName andFileType:(NSString *)fileType;
@@ -23,5 +24,7 @@
  *@fileName:file name
  */
 + (BOOL)isFileExist:(NSString *)fileName;
+
++ (BOOL)isFileExistInBundle:(NSString *)fileName;
 
 @end

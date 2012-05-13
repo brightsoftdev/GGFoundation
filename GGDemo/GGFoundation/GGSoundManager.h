@@ -16,8 +16,6 @@
     
     NSMutableArray *_effects;
     NSString *_backgroundMusics;
-    
-    SimpleAudioEngine *_simpleAudioEngine;
 }
 
 @property (nonatomic, assign) float backgroundMusicVolume;

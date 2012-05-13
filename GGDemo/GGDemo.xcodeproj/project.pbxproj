@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21A253D0155E3FA300BC5B6C /* GGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A253CE155E3FA300BC5B6C /* GGWebViewController.m */; };
+		21A253D1155E3FA300BC5B6C /* GGWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21A253CF155E3FA300BC5B6C /* GGWebViewController.xib */; };
+		21A253DD155E435700BC5B6C /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 21A253DA155E435700BC5B6C /* index.html */; };
+		21A253DE155E435700BC5B6C /* layout.css in Resources */ = {isa = PBXBuildFile; fileRef = 21A253DB155E435700BC5B6C /* layout.css */; };
+		21A253DF155E435700BC5B6C /* test.js in Sources */ = {isa = PBXBuildFile; fileRef = 21A253DC155E435700BC5B6C /* test.js */; };
+		21DC5DA5155F9A5500B70619 /* GGPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DC5DA4155F9A5500B70619 /* GGPageControl.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EBA01B2C15494FFD00ECD185 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA01B2315494FFD00ECD185 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EBA01B2D15494FFD00ECD185 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA01B2515494FFD00ECD185 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EBA01B2E15494FFD00ECD185 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA01B2715494FFD00ECD185 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -74,6 +80,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21A253CD155E3FA300BC5B6C /* GGWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGWebViewController.h; sourceTree = "<group>"; };
+		21A253CE155E3FA300BC5B6C /* GGWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGWebViewController.m; sourceTree = "<group>"; };
+		21A253CF155E3FA300BC5B6C /* GGWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GGWebViewController.xib; sourceTree = "<group>"; };
+		21A253DA155E435700BC5B6C /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		21A253DB155E435700BC5B6C /* layout.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = layout.css; sourceTree = "<group>"; };
+		21A253DC155E435700BC5B6C /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
+		21DC5DA3155F9A5500B70619 /* GGPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGPageControl.h; sourceTree = "<group>"; };
+		21DC5DA4155F9A5500B70619 /* GGPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGPageControl.m; sourceTree = "<group>"; };
 		EBA01B2115494FFD00ECD185 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		EBA01B2215494FFD00ECD185 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		EBA01B2315494FFD00ECD185 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
@@ -323,6 +337,8 @@
 				EBF71C4B154646310049A45C /* GGSoundManager.m */,
 				EBF71C4C154646310049A45C /* GGUtil.h */,
 				EBF71C4D154646310049A45C /* GGUtil.m */,
+				21DC5DA3155F9A5500B70619 /* GGPageControl.h */,
+				21DC5DA4155F9A5500B70619 /* GGPageControl.m */,
 			);
 			path = GGFoundation;
 			sourceTree = "<group>";
@@ -410,6 +426,9 @@
 		EBF71C79154647560049A45C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				21A253DA155E435700BC5B6C /* index.html */,
+				21A253DB155E435700BC5B6C /* layout.css */,
+				21A253DC155E435700BC5B6C /* test.js */,
 				EBF71C7A154647560049A45C /* audio */,
 				EBF71C7B154647560049A45C /* images */,
 			);
@@ -441,6 +460,8 @@
 				EBF71C80154647ED0049A45C /* GGSoundViewController.m */,
 				EBD6639515466097009C94F6 /* GGFontViewController.h */,
 				EBD6639615466098009C94F6 /* GGFontViewController.m */,
+				21A253CD155E3FA300BC5B6C /* GGWebViewController.h */,
+				21A253CE155E3FA300BC5B6C /* GGWebViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -448,6 +469,7 @@
 		EBF71C7D1546476E0049A45C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				21A253CF155E3FA300BC5B6C /* GGWebViewController.xib */,
 				EBF71C81154647ED0049A45C /* GGSoundViewController.xib */,
 				EBF71C0A154645470049A45C /* GGViewController.xib */,
 			);
@@ -544,6 +566,9 @@
 				EBD663E41546AC3F009C94F6 /* 韩绍杰邯郸体.ttf in Resources */,
 				EBD663EA1546AE1B009C94F6 /* 国祥手写体.ttf in Resources */,
 				EBD663EC1546AEF2009C94F6 /* 字体图片.png in Resources */,
+				21A253D1155E3FA300BC5B6C /* GGWebViewController.xib in Resources */,
+				21A253DD155E435700BC5B6C /* index.html in Resources */,
+				21A253DE155E435700BC5B6C /* layout.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +632,9 @@
 				EBA01B2E15494FFD00ECD185 /* SBJsonBase.m in Sources */,
 				EBA01B2F15494FFD00ECD185 /* SBJsonParser.m in Sources */,
 				EBA01B3015494FFD00ECD185 /* SBJsonWriter.m in Sources */,
+				21A253D0155E3FA300BC5B6C /* GGWebViewController.m in Sources */,
+				21A253DF155E435700BC5B6C /* test.js in Sources */,
+				21DC5DA5155F9A5500B70619 /* GGPageControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

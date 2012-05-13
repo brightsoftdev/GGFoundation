@@ -19,7 +19,6 @@ SYNTHESIZE_SINGLETON(GGSoundManager);
 
 - (id)init{
     if ((self=[super init])) {
-        _simpleAudioEngine = [SimpleAudioEngine sharedEngine];
         _backgroundMusicVolume = 1.0;
         _effectVolume = 1.0;
         self.effects = [NSMutableArray array];
@@ -32,7 +31,6 @@ SYNTHESIZE_SINGLETON(GGSoundManager);
     self.effects = nil;
     self.backgroundMusics = nil;
     [SimpleAudioEngine end];
-    _simpleAudioEngine = nil;
     [super dealloc];
 }
 
@@ -41,20 +39,20 @@ SYNTHESIZE_SINGLETON(GGSoundManager);
 {
     _backgroundMusicVolume = volume;
     
-    _simpleAudioEngine.backgroundMusicVolume = _backgroundMusicVolume;
+    [SimpleAudioEngine sharedEngine].backgroundMusicVolume = _backgroundMusicVolume;
 }
 
 - (void)setEffectVolume:(float)volume
 {
     _effectVolume = volume;
     
-    _simpleAudioEngine.effectsVolume = _effectVolume;
+    [SimpleAudioEngine sharedEngine].effectsVolume = _effectVolume;
 }
 
 - (void)loadEffect:(NSArray *)effects
 {
     for (NSString *name in effects) {
-        [_simpleAudioEngine preloadEffect:name];
+        [[SimpleAudioEngine sharedEngine] preloadEffect:name];
     }
     [self.effects addObjectsFromArray:effects];
 }
@@ -62,36 +60,36 @@ SYNTHESIZE_SINGLETON(GGSoundManager);
 - (void)loadBackgroundMusic:(NSString *)musicName
 {
     self.backgroundMusics = musicName;
-    [_simpleAudioEngine preloadBackgroundMusic:musicName];
+    [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:musicName];
 }
 
 - (void)playBackgroundMusic:(NSString *)pathFile loop:(BOOL)isLoop
 {
     if (isLoop) {
-        [_simpleAudioEngine playBackgroundMusic:pathFile];
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:pathFile];
         return;
     }
-    [_simpleAudioEngine playBackgroundMusic:pathFile loop:isLoop];
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:pathFile loop:isLoop];
 }
 
 - (void)stopBackgroundMusic
 {
-    [_simpleAudioEngine stopBackgroundMusic];
+    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 }
 
 - (void)pauseBackgroundMusic
 {
-    [_simpleAudioEngine pauseBackgroundMusic];
+    [[SimpleAudioEngine sharedEngine] pauseBackgroundMusic];
 }
 
 - (void)resumeBackgroundMusic
 {
-    [_simpleAudioEngine resumeBackgroundMusic];
+    [[SimpleAudioEngine sharedEngine] resumeBackgroundMusic];
 }
 
 - (void)playEffect:(NSString *)pathFile
 {    
-    [_simpleAudioEngine playEffect:pathFile];
+    [[SimpleAudioEngine sharedEngine] playEffect:pathFile];
 }
 
 - (void)unloadAllEffect
@@ -102,7 +100,7 @@ SYNTHESIZE_SINGLETON(GGSoundManager);
 - (void)unloadEffectsWith:(NSArray *)effects
 {
     for (NSString *filePath in effects) {
-        [_simpleAudioEngine unloadEffect:filePath];
+        [[SimpleAudioEngine sharedEngine] unloadEffect:filePath];
     }
     [self.effects removeObjectsInArray:effects];
 }

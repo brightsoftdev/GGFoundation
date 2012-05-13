@@ -31,6 +31,24 @@
     return str;
 }
 
++ (NSData *)documentPathWith:(NSString *)fileName
+{
+    NSString *path = [GGPath documentPath];
+    path = [path stringByAppendingPathComponent:fileName];
+    
+    NSError *error;
+    NSData *data = [[[NSData alloc] initWithContentsOfFile:path 
+                                                   options:NSDataReadingMappedIfSafe 
+                                                     error:&error] autorelease];
+    if (!data) {
+        NSLog(@"%@ Data Error : %@", fileName, error);
+        return nil;
+    }else {
+        NSLog(@"%@ data Successfully!!!", fileName);
+        return data;
+    }
+}
+
 
 + (NSString *)bundleFile:(NSString *) fileName
 {
@@ -65,6 +83,12 @@
     NSString *finalPath = [path stringByAppendingPathComponent:fileName];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     return [fileManager fileExistsAtPath:finalPath];
+}
+
++ (BOOL)isFileExistInBundle:(NSString *)fileName
+{
+    NSString *path = [GGPath bundleFile:fileName];
+    return [[NSFileManager defaultManager] fileExistsAtPath:path];
 }
 
 @end
